@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jonai\\source\\repos\\PrediccionTendenciasActivos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0296B546-83E6-4265-8E9A-F612962A0DE3}|PrediccionTendenciasActivos\\PrediccionTendenciasActivos.csproj|c:\\users\\jonai\\source\\repos\\predicciontendenciasactivos\\predicciontendenciasactivos\\views\\activos\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0296B546-83E6-4265-8E9A-F612962A0DE3}|PrediccionTendenciasActivos\\PrediccionTendenciasActivos.csproj|solutionrelative:predicciontendenciasactivos\\views\\activos\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonai\\source\\repos\\PrediccionTendenciasActivos\\PrediccionTendenciasActivos\\Views\\Activos\\Home.cshtml",
+              "RelativeDocumentMoniker": "PrediccionTendenciasActivos\\Views\\Activos\\Home.cshtml",
+              "ToolTip": "C:\\Users\\jonai\\source\\repos\\PrediccionTendenciasActivos\\PrediccionTendenciasActivos\\Views\\Activos\\Home.cshtml",
+              "RelativeToolTip": "PrediccionTendenciasActivos\\Views\\Activos\\Home.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T21:59:59.824Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

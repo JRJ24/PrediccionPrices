@@ -1,0 +1,11 @@
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/bin/Release/net8.0/Aplication.deps.json
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/bin/Release/net8.0/Aplication.dll
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/bin/Release/net8.0/Aplication.pdb
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/Aplication.GeneratedMSBuildEditorConfig.editorconfig
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/Aplication.AssemblyInfoInputs.cache
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/Aplication.AssemblyInfo.cs
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/Aplication.csproj.CoreCompileInputs.cache
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/Aplication.dll
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/refint/Aplication.dll
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/Aplication.pdb
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/obj/Release/net8.0/ref/Aplication.dll

@@ -1,0 +1,188 @@
+﻿@using Aplication.ViewModels
+@model PrediccionListViewModel
+@{
+    ViewData["Title"] = "Tendecia Prediccion de Activos";
+}
+
+<div class="text-center">
+    <h1 class="col-12 col-md-6 offset-md-3 text-center">@ViewData["Title"]</h1>
+    <div class="row">
+        <p class="text-center">Predice la tendencia de activos financieros.</p>
+        <div class="col-12 col-md-4">
+            <button class="btn btn-outline-dark rounded-pill mb-3" id="btnSMA">SMA</button>
+            <div class="card d-none mb-3" id="containerSMA">
+                <div class="card-header bg-dark text-light sma-div">
+                    <h5 class="text-center text-calcule">Media Simple Movil</h5>
+                    
+                    @foreach (var activo in Model.ActivosPredicciones)
+                    {
+                        @if(activo.SMAResult == "Alcista")
+                        {
+                            <h6 class="text-center text-white">@activo.SMAResult</h6>
+                        }
+
+                        @if(activo.SMAResult == "Bajista")
+                        {
+                            <h6 class="text-center text-danger">@activo.SMAResult</h6>
+                        }
+                    }
+
+                </div>
+                <div class="card-body">
+                    @if (Model.ActivosPredicciones.Count == 0)
+                    {
+                        <h4>No hay predicciones</h4>
+                    }
+                    else
+                    {
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Activo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var activo in Model.ActivosPredicciones)
+                                {
+                                    for (int i = 0; i < activo.dateActivo.Length; i++)
+                                    {
+                                        <tr>
+                                            <td>@activo.dateActivo[i]</td>
+                                            <td>@activo.valorActivo[i]</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <button class="btn btn-outline-dark rounded-pill mb-3" id="btnRL">Regresion Lineal</button>
+            <div class="card d-none mb-3" id="containerRL">
+                <div class="card-header bg-dark text-light rl-div">
+                    <h5 class="text-center text-calcule">Regresion Lineal</h5>
+                    @foreach (var activo in Model.ActivosPredicciones)
+                    {
+                        <h6 class="text-center">@activo.RegresionLinealResult</h6>
+                        @if(activo.tendenciaRegresionLineal == "Alcista")
+                        {
+                            <h6 class="text-center text-white">@activo.tendenciaRegresionLineal</h6>
+                        }
+                        @if(activo.tendenciaRegresionLineal == "Bajista")
+                        {
+                            <h6 class="text-center text-danger">@activo.tendenciaRegresionLineal</h6>
+                        }
+                    }
+                </div>
+                <div class="card-body">
+                    @if (Model.ActivosPredicciones.Count == 0)
+                    {
+                        <h4>No hay predicciones</h4>
+                    }
+                    else
+                    {
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Activo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var activo in Model.ActivosPredicciones)
+                                {
+                                    for (int i = 0; i < activo.dateActivo.Length; i++)
+                                    {
+                                        <tr>
+                                            <td>@activo.dateActivo[i]</td>
+                                            <td>@activo.valorActivo[i]</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <button class="btn btn-outline-dark rounded-pill mb-3" id="btnROC">ROC Momentum</button>
+            <div class="card d-none mb-3" id="containerROC">
+                <div class="card-header bg-dark text-light">
+                    <h5 class="text-center text-calcule">ROC Momentum</h5>                  
+                </div>
+                <div class="card-body">
+                    @if (Model.ActivosPredicciones.Count == 0)
+                    {
+                        <h4>No hay predicciones</h4>
+                    }
+                    else
+                    {
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Activo</th>
+                                    <th>ROC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var activo in Model.ActivosPredicciones)
+                                {
+                                    for (int i = 0; i < activo.dateActivo.Length; i++)
+                                    {
+                                        <tr>
+                                            <td>@activo.dateActivo[i]</td>
+                                            <td>@activo.valorActivo[i]</td>
+                                            <td>@activo.RocMomentumResult[i]</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-controller="Activos" asp-action="Modos" class="btn btn-outline-warning mb-5">Back to home</a>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        const btnSMA = document.getElementById("btnSMA");
+        const btnRL = document.getElementById("btnRL");
+        const btnROC = document.getElementById("btnROC");
+        const containerSMA = document.getElementById("containerSMA");
+        const containerRL = document.getElementById("containerRL");
+        const containerROC = document.getElementById("containerROC");
+
+        function hideAllContainers() {
+            containerSMA.classList.add('d-none');
+            containerRL.classList.add('d-none');
+            containerROC.classList.add('d-none');
+        }
+
+        btnSMA.addEventListener('click', function() {
+            hideAllContainers();
+            containerSMA.classList.remove('d-none');
+        });
+
+        btnRL.addEventListener('click', function() {
+            hideAllContainers();
+            containerRL.classList.remove('d-none');
+        });
+
+        btnROC.addEventListener('click', function() {
+            hideAllContainers();
+            containerROC.classList.remove('d-none');
+        });
+    </script>
+}
+
+

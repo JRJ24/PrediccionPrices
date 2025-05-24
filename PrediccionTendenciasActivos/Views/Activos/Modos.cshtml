@@ -1,0 +1,95 @@
+﻿@using Aplication.ViewModels
+
+@model ActivosViewModel
+
+@{
+    ViewData["Title"] = "Activos financieros";
+}
+
+<div class="text-center">
+    <h2 class="col-12 col-md-6 offset-md-3 text-center">@ViewData["Title"]</h2>
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-dark text-light">
+                    <h5 class="text-center">Activos</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-controller="Activos" asp-action="Modos" method="post" class="mb-3">
+                        <div class="row row-cols-1 row-cols-1-md-2 row-cols-lg-3 g-3">
+                            @for (int i = 0; i < 20; i++)
+                            {
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <div class="mb-2">
+                                                <label asp-for="dateActivo" class="form-label">Fecha</label>
+                                                <input asp-for="dateActivo[@i]" class="form-control" type="date" 
+                                                    id="dateActivo_@(i)"/>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label asp-for="valorActivo" class="form-label">Valor</label>
+                                                <input asp-for="valorActivo[i]" class="form-control" type="number"/>
+                                                <span asp-validation-for="valorActivo" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div>
+                            <a asp-controller="Activos" asp-action="Home" class="btn btn-outline-warning float-start">Go to Prediction</a>
+                            <button type="submit" class="btn btn-outline-primary float-end me-2">Calcular</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const date = document.getElementById("dateActivo_0");
+
+        function formtFecha(date) {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${year}-${month}-${day}`;
+        }
+
+        function completeOtherDates() {
+            const dateInitialValue = date.value;
+            if (dateInitialValue)
+            {
+                const baseDate = new Date(dateInitialValue + 'T00:00:00');
+
+                for (let i = 1; i <= 20; i++) {
+                    const campDate = document.getElementById(`dateActivo_${i}`);
+
+                    if(campDate){
+                        const nextDate = new Date(baseDate);
+                        nextDate.setDate(baseDate.getDate() + i);
+
+                        const year = nextDate.getFullYear();
+                        const month = String(nextDate.getMonth() + 1).padStart(2, '0');
+                        const day = String(nextDate.getDate()).padStart(2, '0');
+                        campDate.value = `${year}-${month}-${day}`;
+
+                    }
+                }
+            }else{
+                for(let i = 1; i <= 20; i++) {
+                    const campDate = document.getElementById(`dateActivo_${i}`);
+                    if(campDate){
+                        campDate.value = '';
+                    }
+                }
+            }
+        }
+        date.addEventListener('change', completeOtherDates);
+    </script>
+
+}

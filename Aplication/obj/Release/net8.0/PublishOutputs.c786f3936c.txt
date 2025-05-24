@@ -1,0 +1,3 @@
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/bin/Release/net8.0/publish/Aplication.dll
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/bin/Release/net8.0/publish/Aplication.deps.json
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/Aplication/bin/Release/net8.0/publish/Aplication.pdb

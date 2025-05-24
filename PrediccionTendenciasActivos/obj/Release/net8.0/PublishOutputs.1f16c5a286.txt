@@ -1,0 +1,9 @@
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/PrediccionTendenciasActivos
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/appsettings.Development.json
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/appsettings.json
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/PrediccionTendenciasActivos.dll
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/PrediccionTendenciasActivos.deps.json
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/PrediccionTendenciasActivos.runtimeconfig.json
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/PrediccionTendenciasActivos.pdb
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/Aplication.dll
+/home/jr_d_jesus/Documentos/itla/ItlaProyects/PrediccionTendenciasActivos/PrediccionTendenciasActivos/bin/Release/net8.0/publish/Aplication.pdb
