@@ -1,0 +1,7 @@
+# Archivo de Desarrollo
+
+Este archivo indica que te encuentras en la rama de desarrollo del proyecto.
+
+Utiliza esta rama para implementar nuevas características, corregir errores y realizar pruebas antes de fusionar los cambios a la rama principal (main/master).
+
+Recuerda seguir las buenas prácticas de control de versiones y documentar los cambios realizados.
